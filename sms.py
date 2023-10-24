@@ -16,8 +16,8 @@ def control() :
     else :
         print("\033[91mInvalid number\033[0m")
 def sms() :
-   phone_no = input("enter phone number : ")
-   msg = input("message to send : ")
+   phone_no = input("+256702986037 : ")
+   msg = input(hey : ")
 
    resp = requests.post('https://textbelt.com/text',{
 	'phone' : phone_no,
@@ -31,7 +31,7 @@ def sms() :
    if '"success" : false' in resp.text :
        print("failed to send msg!\n Sorry!! Try again!! ")
 def status() :
-  textID = input("Enter textID of sms : ") 
+  textID = input("whatsapp : ") 
   os.system(f"curl https://textbelt.com/status/{textID}")
 os.system("clear")
 os.system("toilet -f smblock --filter border:metal 'ANONYMOUS_SMS' ")
